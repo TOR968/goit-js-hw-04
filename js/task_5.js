@@ -18,28 +18,25 @@ const invokeInventoryAction = function (itemName, action) {
 
 const invokeAdd = invokeInventoryAction(
   'Medkit',
-  inventory.add, // Write code in this line
+  inventory.add.bind('Medkit'), // Write code in this line
 );
 const arrayAdd = [...inventory.items];
-/* 
-//console.log(invokeAdd);
-//{ act: 'Adding Medkit to inventory', msg: 'Invoking action on Medkit' }
 
-//console.log(arrayAdd);
-// ['Knife', 'Gas mask', 'Medkit']
-*/
+// console.log(invokeAdd);
+// { act: 'Adding Medkit to inventory', msg:'Invoking action on Medkit' }
+
+// console.log(arrayAdd);
+// ['Knife', 'Gas mask', 'Medkit'];
 
 const invokeRemove = invokeInventoryAction(
   'Gas mask',
-  inventory.remove, // Write code in this line
+  inventory.remove.bind('Gas mask'), // Write code in this line
 );
 
 const arrayRemove = [...inventory.items];
 
-/*
-//console.log(invokeRemove);
-//{ act: 'Removing Gas mask from inventory', msg: 'Invoking action on Gas mask' }
+// console.log(invokeRemove);
+// { act: 'Removing Gas mask from inventory', msg: 'Invoking action on Gas mask' }
 
-//console.log(arrayRemove);
+// console.log(arrayRemove);
 // ['Knife', 'Medkit']
-*/

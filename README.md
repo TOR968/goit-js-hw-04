@@ -61,4 +61,6 @@ this в методах объекта
 bind для замены this в методах объекта Оформи вызов метода invokeInventoryAction
 таким образом, чтобы в качестве this для методов
 
-inventory.add inventory.remove выступал объект inventory
+inventory.add
+
+inventory.remove выступал объект inventory
